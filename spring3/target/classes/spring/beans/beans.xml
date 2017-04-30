@@ -3,11 +3,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<bean id="logger" class="spring.Logger" autowire="byType">
+	<bean id="logger" class="spring.Logger" autowire="byName">
 	</bean>
 
 
-	<bean id="consoleWritter" class="spring.ConsoleWritter"
-		autowire="byName">
+	<bean id="consoleWritter" class="spring.ConsoleWritter">
+	</bean>
+	<bean id="fileWritter" class="spring.FileWritter" >
 	</bean>
 </beans>

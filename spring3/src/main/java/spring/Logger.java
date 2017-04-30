@@ -5,14 +5,14 @@ import java.security.GeneralSecurityException;
 import spring.*;
 
 public class Logger {
-	private ConsoleWritter consoleWriter;
+	private ConsoleWritter consoleWritter;
 	private FileWritter fileWriter;
 
-	public void setConsoleWriter(ConsoleWritter writer) {
-		this.consoleWriter = writer;
+	public void setConsoleWritter(ConsoleWritter writer) {
+		this.consoleWritter = writer;
 	}
 
-	public void setFileWriter(FileWritter fileWriter) {
+	public void setFileWritter(FileWritter fileWriter) {
 		this.fileWriter = fileWriter;
 	}
 	
@@ -23,7 +23,7 @@ public class Logger {
 	public void writeConsole(String text) {
 		
 		System.out.println("text from Logger writeConsole: " + text);
-		consoleWriter.write("try write text");
+		consoleWritter.write("try write text");
 
 	}
 
