@@ -1,31 +1,30 @@
 package spring;
 
+import java.security.GeneralSecurityException;
+
+import spring.*;
+
 public class Logger {
-	private ConsoleWritter consoleWritter;
-	private FileWritter fileWritter;
+	private ConsoleWritter consoleWriter;
+	private FileWritter fileWriter;
 
-	public void consoleWrite (String text) {
-		this.consoleWritter.setText(text);
+	public void setConsoleWriter(ConsoleWritter writer) {
+		this.consoleWriter = writer;
+	}
+
+	public void setFileWriter(FileWritter fileWriter) {
+		this.fileWriter = fileWriter;
 	}
 	
-	public void fileWrite (String text) {
-		this.fileWritter.setText(text);
+	public void writeFile(String text) {
+		
 	}
 	
-	public ConsoleWritter getConsoleWritter() {
-		return consoleWritter;
-	}
+	public void writeConsole(String text) {
+		
+		System.out.println("text from Logger writeConsole: " + text);
+		consoleWriter.write("try write text");
 
-	public void setConsoleWritter(ConsoleWritter consoleWritter) {
-		this.consoleWritter = consoleWritter;
-	}
-
-	public FileWritter getFileWritter() {
-		return fileWritter;
-	}
-
-	public void setFileWritter(FileWritter fileWritter) {
-		this.fileWritter = fileWritter;
 	}
 
 }

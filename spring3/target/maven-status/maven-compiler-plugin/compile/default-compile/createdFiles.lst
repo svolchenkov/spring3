@@ -1,5 +1,5 @@
 spring/Logger.class
 spring/App.class
 spring/FileWritter.class
-spring/LogWritter.class
 spring/ConsoleWritter.class
+spring/LogWriter.class

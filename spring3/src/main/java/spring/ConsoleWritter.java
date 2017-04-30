@@ -11,4 +11,13 @@ public class ConsoleWritter {
 	public void setText(String text) {
 		this.text = text;
 	}
+	
+	public void write(String text) {
+		System.out.println("ConsoleWritter wrote text: " + text);
+	}
+	
+	public ConsoleWritter getInstance () {
+		return new ConsoleWritter();
+	}
+	
 }
