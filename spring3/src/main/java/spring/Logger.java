@@ -5,15 +5,25 @@ import java.security.GeneralSecurityException;
 import spring.*;
 
 public class Logger {
+	
 	private ConsoleWritter consoleWritter;
-	private FileWritter fileWriter;
+	private FileWritter fileWritter;
 
+	public Logger () {
+		
+	}
+	
+	public Logger (ConsoleWritter consoleWritter, FileWritter fileWritter) {
+		this.consoleWritter = consoleWritter;
+		this.fileWritter = fileWritter;
+	}
+	
 	public void setConsoleWritter(ConsoleWritter writer) {
 		this.consoleWritter = writer;
 	}
 
-	public void setFileWritter(FileWritter fileWriter) {
-		this.fileWriter = fileWriter;
+	public void setFileWritter(FileWritter fileWritter) {
+		this.fileWritter = fileWritter;
 	}
 	
 	public void writeFile(String text) {
